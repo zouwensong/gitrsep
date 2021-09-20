@@ -71,9 +71,9 @@ def count_ifelse(key_list):
             stack.pop()
         stack.pop()
         if flag == 0:
-            count_ie+=1
+            count_ifelse+=1
         if flag ==1:
-            count_iei+=1
+            count_ifelseif+=1
 
 
 
@@ -82,7 +82,7 @@ def count_ifelse(key_list):
 # 传入关键词组成的列表，输出每组switch内的case数目
 def case_num(ed_key_list):# 文件中有switch才能统计case
     length = len(ed_key_list)
-    if (ed_key_list.count('switch',0)):#从索引0位置查找switch个数且找到就执行
+    if ed_key_list.count('switch'):#从索引0位置查找switch个数且找到就执行
         num_case = []
         for i in range(length):
             if ed_key_list[i] == 'switch':
@@ -124,9 +124,9 @@ if __name__ == '__main__':
         print('case num: ', end='')
         print(*case_num(ed_key_list), sep=' ')
     elif level == 3:
-        print('if-else num: ',count_ie)
+        print('if-else num: ',count_ifelse)
     elif level == 4:
-        print('if-elseif-else num: ',count_iei)
+        print('if-elseif-else num: ',count_ifelself)
 
 
 
