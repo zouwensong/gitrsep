@@ -124,8 +124,19 @@ if __name__ == '__main__':
         print('case num: ', end='')
         print(*case_num(ed_key_list), sep=' ')
     elif level == 3:
+        print('total num: ', key_word(key_list))
+        print('switch num: ', key_list.count('switch'))
+        ed_key_list = get_key_list(key_list)
+        print('case num: ', end='')
+        print(*case_num(ed_key_list), sep=' ')
         print('if-else num: ',count_ifelse)
     elif level == 4:
+        print('total num: ', key_word(key_list))
+        print('switch num: ', key_list.count('switch'))
+        ed_key_list = get_key_list(key_list)
+        print('case num: ', end='')
+        print(*case_num(ed_key_list), sep=' ')
+        print('if-else num: ',count_ifelse)
         print('if-elseif-else num: ',count_ifelself)
 
 
