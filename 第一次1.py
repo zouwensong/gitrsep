@@ -10,7 +10,7 @@ def read_text(path):# path为传入的c,cpp路径
         file_text = file_text.split('\n')   # 按换行符分割文本
         fp.close()
     except:
-        print("文件打开错误")
+        print("无效")
     return file_text
 
 # 将read_text处理的文件内容中空格删除，并进一步细化关键词
@@ -59,7 +59,7 @@ def key_word(key_list):
 # 传入关键词组成的列表，输出每组switch内的case数目
 def case_num(ed_key_list):# 文件中有switch才能统计case
     length = len(ed_key_list)
-    if (ed_key_list.count('switch',0)):#从索引0位置查找switch个数且找到就执行
+    if ed_key_list.count('switch'):#从索引0位置查找switch个数且找到就执行
         num_case = []
         for i in range(length):
             if ed_key_list[i] == 'switch':
